@@ -1,0 +1,26 @@
+.button {
+  padding: 0.5em 1em;
+  font-size: 21px;
+  display: inline-block;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  font-weight: 900;
+  border: none;
+}
+.button:hover {
+  text-decoration: none;
+}
+.button.site-color-4.button {
+  -webkit-transition: background-color 300ms linear;
+  -moz-transition: background-color 300ms linear;
+  -o-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
+  background-color: #73ac39;
+}
+.button.site-color-4.button:hover {
+  background-color: #669933;
+}
+.button.site-color-4.button:active {
+  background-color: #59862d;
+}

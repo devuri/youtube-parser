@@ -1,0 +1,72 @@
+@import 'variable.less';
+
+.pp-row {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    .clear();
+    .pp-col {
+        float: left;
+        #columnWidth(1,12);
+        #columnWidth(2,12);
+        #columnWidth(3,12);
+        #columnWidth(4,12);
+        #columnWidth(5,12);
+        #columnWidth(6,12);
+        #columnWidth(7,12);
+        #columnWidth(8,12);
+        #columnWidth(9,12);
+        #columnWidth(10,12);
+        #columnWidth(11,12);
+        #columnWidth(12,12);
+        &.w12-12 {
+            float: none;
+        }
+        #offset(-1,12);
+        #offset(1,12);
+        #offset(2,12);
+        #offset(3,12);
+        #offset(4,12);
+        #offset(5,12);
+        #offset(6,12);
+        #offset(7,12);
+        #offset(8,12);
+        #offset(9,12);
+        #offset(10,12);
+        #offset(11,12);
+        #offset(12,12);
+    }
+}
+.clear() {
+    &:after,
+        &:before {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+.pp-width {
+  width: round(60 * @em);
+  margin: 0 auto;
+  max-width: 100%;
+}
+.pp-full {
+  width: 100%;
+}
+#columnWidth(@f, @s) {
+    &.w@{f}-@{s} {
+        width: ((100% * @f) / @s);
+    }
+}
+#offset(@off, @s) {
+    &.off@{off} {
+        margin-left: ((100% * @off) / @s);
+    }
+}
+
+.animation(@animation) {
+  -webkit-animation: @animation;
+  -moz-animation: @animation;
+  -o-animation: @animation;
+  animation: @animation;
+}
