@@ -43,6 +43,8 @@ function ytp_parser($args) {
   } else
   if (isset($_POST["you"]["url"])) {
     $uriRaw = htmlspecialchars($_POST["you"]["url"]);
+  } else {
+    $uriRaw = 'https://www.youtube.com/watch?v=XYZdQRUU5IA';
   }
   $previewVideoStatic = new ytp_previewParserObject($uriRaw, $args['uridef']);
   if($width) {
