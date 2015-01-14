@@ -43,8 +43,6 @@ function ytp_parser($args) {
   } else
   if (isset($_POST["you"]["url"])) {
     $uriRaw = htmlspecialchars($_POST["you"]["url"]);
-  } else {
-    $uriRaw = 'https://www.youtube.com/watch?v=XYZdQRUU5IA';
   }
   $previewVideoStatic = new ytp_previewParserObject($uriRaw, $args['uridef']);
   if($width) {
@@ -62,12 +60,10 @@ function ytp_parser($args) {
         <h1 class="preparser-title">YouTube Preview</h1>
         <div class="preparser-desc"><?php echo __('Get an available preview of the image for your video on Youtube', 'previewparser'); ?></div>
       </div>
-    <div class="pp-width">
       <form method="POST" class="preparser-form pp-col w8-12 off2" id="preparser-form" name="preparser-form">
         <input class="preparser-form-input" type="text" data-def="<?php echo $previewVideoStatic->uriDef; ?>" name="you[url]" value="<?php echo $uriRaw ?>" size="40">
         <input class="preparser-form-button" type="submit" id="preparser-form-submit" value="Получить">
       </form>
-  </div>
       <div class="pp-row">
         <div class="preparser-desc-bottom">
           <?php echo __('Copy the address of the video from YouTube and we\'ll show you all available preview of the image', 'previewparser'); ?>
