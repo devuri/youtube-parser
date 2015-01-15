@@ -26,6 +26,9 @@ function ytp_parser($args) {
         'h-width' => false,
         'uridef' => $args['uridef'],
     ), $args ) );
+  if(empty($args['uridef'])) {
+    $args['uridef'] = 'c6bEs3dxjPg';
+  }
   $class = '';
   $w = $args['h-width'];
   switch($w) {
